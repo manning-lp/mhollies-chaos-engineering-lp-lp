@@ -72,7 +72,8 @@ public class AlphaConnector {
         return segments;
     }
 
-    private void createSegmentReturn(Faker faker, List<SegmentDTO> segments, String[] departureDate, String[] origin, String[] destination) {
+    private void createSegmentReturn(Faker faker, List<SegmentDTO> segments, String[] departureDate, String[] origin,
+            String[] destination) {
         SegmentDTO segmentReturn = new SegmentDTO();
         List<LegDTO> legs = Lists.newArrayList();
         LegDTO leg = new LegDTO(origin[1], destination[1], departureDate[1], "12:00", departureDate[1], "18:00",
@@ -83,7 +84,8 @@ public class AlphaConnector {
         segments.add(segmentReturn);
     }
 
-    private void createSegmentOrigin(Faker faker, List<SegmentDTO> segments, String[] departureDate, String[] origin, String[] destination) {
+    private void createSegmentOrigin(Faker faker, List<SegmentDTO> segments, String[] departureDate, String[] origin,
+            String[] destination) {
         SegmentDTO segmentOrigin = new SegmentDTO();
         List<LegDTO> legs = Lists.newArrayList();
         LegDTO leg = new LegDTO(origin[0], destination[0], departureDate[0], "06:00", departureDate[0], "12:00",
